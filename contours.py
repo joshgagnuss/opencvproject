@@ -23,8 +23,4 @@ ret, thresh = cv.threshold(gray, 125, 255, cv.THRESH_BINARY)
 contours, heirarchies = cv.findContours(thresh, cv.RETR_LIST, cv.CHAIN_APPROX_NONE)
 print(f'{len(contours)} contours found')
 
-
-
-
-
 cv.waitKey(0)

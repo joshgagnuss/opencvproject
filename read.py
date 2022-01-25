@@ -2,21 +2,21 @@ import cv2 as cv
 
 #Reading Images
 
-img = cv.imread('photos/cat1.jpg')
+# img = cv.imread('photos/cat1.jpg')
 
-cv.imshow('Cat', img)
-cv.waitKey(0)
+# cv.imshow('Cat', img)
+# cv.waitKey(0)
 
-#Reading Videos 
+# Reading Videos 
 
-# capture = cv.VideoCapture('videos/test.mkv')
+capture = cv.VideoCapture('videos/highway.mp4')
 
-# while True:
-#     isTrue, frame = capture.read()
-#     cv.imshow('Video', frame)
+while True:
+    isTrue, frame = capture.read()
+    cv.imshow('Video', frame)
 
-#     if cv.waitKey(20) & 0xFF == ord('d'):
-#         break
+    if cv.waitKey(20) & 0xFF == ord('d'):
+        break
 
-# capture.release()
-# cv.destroyAllWindows()
+capture.release()
+cv.destroyAllWindows()
